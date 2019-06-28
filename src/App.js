@@ -44,15 +44,9 @@ class App extends React.Component{
 
     render(){
     return(
-        <div className="container">
-            <div className="row">
-                <div className="col-sm-4"></div>
-                <Field  addTodo={this.addTodo}/>
-                <div className="col-sm-4"></div>
-                
+        <div className="container"> 
+                <Field  addTodo={this.addTodo}/> 
                 <List tasks={this.state.items} dell={this.dell}/>
-            </div>
-            
         </div>
         );
     };

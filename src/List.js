@@ -27,25 +27,24 @@ class List extends React.Component {
     }
     render(){
         return(
-            <div className="row">
-            <ul >
-                
-                {   this.props.tasks.map((i) =>{
-                     
-                return (<div className="row">
-                        <div className="col-sm-10">
-                        <li className="list-group-item" onClick={this.handleClick.bind(this,i.id,this.props.tasks)}> { this.state.onclick[i.id-1] ? <del>{i.title}</del> : i.title}</li>
-                        </div>
-                        <div className="col-sm-2">
-                        <button className="btn btn-danger" onClick={this.props.dell.bind(this,i.id)}>Delete</button>
-                        </div>
+            
+            <ul className="list-group">
+                          
+                {   this.props.tasks.map((i) =>{     
+                return (
+                        <div className="row">
+                            <div className="col-sm-11">
+                                <li  className="list-group-item" onClick={this.handleClick.bind(this,i.id,this.props.tasks)}> { this.state.onclick[i.id-1] ? <del>{i.title}</del> : i.title}</li>  
+                            </div >
+                            <div className="col-sm-1">    
+                                <button className="btn btn-danger" onClick={this.props.dell.bind(this,i.id)}>Delete</button>
+                            </div>
                         </div>
                     );})
                 }
                 
-                
-                </ul>
-                </div>
+            </ul>
+            
         );
     }
 };

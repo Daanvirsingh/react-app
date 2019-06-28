@@ -22,16 +22,14 @@ class Field extends React.Component {
 
     render() {
         return(
-            <div className="col-sm-4">
+            <div className="row form-group">
 
                 <h1 className="text-center">TO DO LIST</h1>
-
                 <input type='text' className="form-control"
                 onChange={this.handleChange} value={this.state.input}/>
                 <br></br>
-                <div className="text-center">
-                <button className="btn btn-secondary" onClick={this.handleTodo}>SUBMIT</button>
-                </div>
+                <button className="btn btn-secondary mt-1 btn-block" onClick={this.handleTodo}>SUBMIT</button>
+                
             </div>
         );
     };
